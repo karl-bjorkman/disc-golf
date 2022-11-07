@@ -36,6 +36,8 @@ ax1.set_ylabel('Total Score (Par: 54)', labelpad = 15)
 ax1.set_xticks(range(len(total_scores)))
 ax1.set_yticks(range(scores_min, scores_max + 1))
 
+ax1.axhline(54, color = 'gray', linestyle = '--', linewidth = 0.8)
+
 plt.plot(total_scores, color='green', marker='o')
 
 # Adjusted Score:
@@ -65,6 +67,8 @@ for i in range(plus_minus_min, plus_minus_max + 1):
 ax2.set_xticks(range(len(plus_minus)))
 ax2.set_yticks(range(plus_minus_min, plus_minus_max + 1))
 ax2.set_yticklabels(pm_yticks)
+
+ax2.axhline('E', color = 'gray', linestyle = '--', linewidth = 0.8)
 
 plt.plot(plus_minus, color='blue', marker='o')
 
