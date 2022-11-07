@@ -68,10 +68,36 @@ ax2.set_xticks(range(len(plus_minus)))
 ax2.set_yticks(range(plus_minus_min, plus_minus_max + 1))
 ax2.set_yticklabels(pm_yticks)
 
-ax2.axhline('E', color = 'gray', linestyle = '--', linewidth = 0.8)
+ax2.axhline('E', color = 'gray', linestyle = '--', linewidth = 1)
 
 plt.plot(plus_minus, color='blue', marker='o')
 
 plt.show()
+plt.close('all')
 
-plt.savefig('buchmiller_scores.png')
+# Above or below par
+
+over = 0
+under = 0
+even = 0
+
+outcomes = ['Over', 'Under', 'Even']
+
+for i in total_scores:
+    if i > 54:
+        over += 1
+    elif i < 54:
+        under += 1
+    else:
+        even += 1
+
+outcome_counts = [over, under, even]
+
+plt.figure(figsize = (10, 8))
+ax3 = plt.subplot()
+ax3.set_title('Score Distribution in Relation to Par', pad = 15)
+ax3.set_xlabel('Par Outcomes', labelpad = 15)
+ax3.set_ylabel('Number of Rounds', labelpad = 15)
+
+plt.bar(outcomes, outcome_counts, color = ['red', 'green', 'yellow'], edgecolor = 'black')
+plt.show()
