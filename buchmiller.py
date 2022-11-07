@@ -95,7 +95,7 @@ outcome_counts = [over, under, even]
 
 plt.figure(figsize = (10, 8))
 ax3 = plt.subplot()
-ax3.set_title('Score Distribution in Relation to Par', pad = 15)
+ax3.set_title('Score Distribution in Relation to Par - D.F. Buchmiller', pad = 15)
 ax3.set_xlabel('Par Outcomes', labelpad = 15)
 ax3.set_ylabel('Number of Rounds', labelpad = 15)
 
