@@ -99,5 +99,5 @@ ax3.set_title('Score Distribution in Relation to Par - D.F. Buchmiller', pad = 1
 ax3.set_xlabel('Par Outcomes', labelpad = 15)
 ax3.set_ylabel('Number of Rounds', labelpad = 15)
 
-plt.bar(outcomes, outcome_counts, color = ['red', 'green', 'yellow'], edgecolor = 'black')
+plt.bar(outcomes, outcome_counts, color = ['lightcoral', 'palegreen', 'gold'], edgecolor = 'black')
 plt.show()
